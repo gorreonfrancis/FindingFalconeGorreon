@@ -31,10 +31,18 @@
     <h1 class="select">Select planets you want to search in:</h1>
 
     <div class="main-container">
-        <div class="destination-container">Destination 1</div>
-        <div class="destination-container">Destination 2</div>
-        <div class="destination-container">Destination 3</div>
-        <div class="destination-container">Destination 4</div>
+        <div class="destination-container">
+            <p class="destination-number">Destination 1</p>
+        </div>
+        <div class="destination-container">
+            <p class="destination-number">Destination 2</p>
+        </div>
+        <div class="destination-container">
+            <p class="destination-number">Destination 3</p>
+        </div>
+        <div class="destination-container">
+            <p class="destination-number">Destination 4</p>
+        </div>
     </div>
 
     <footer class="footer">

@@ -26,7 +26,8 @@
 .right-section{
     display: flex;
     position: absolute;
-    right: 20px;
+    right: 0px;
+    padding-right: 30px;
 }
 
 .reset-container{
