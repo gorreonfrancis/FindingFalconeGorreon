@@ -18,7 +18,8 @@
     <p class="story">King Shan has received intelligence that Al Falcone is in hiding in one of these 6 planets - DonLon, Enchai, Jebing, Sapir, Lerbin & Pingasor. However he has limited resources at his disposal & can send his army to only 4 of these planets.</p>
 
     <div class="button-container">
-        <button class="play-button">Play</button>
+        <a href="main.php"> <button class="play-button">Play</button>
+        </a>
     </div>
 
 </body>

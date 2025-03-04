@@ -4,10 +4,6 @@ body{
     font-family: Roboto;
 }
 
-/* h1, h2, h3, h4, h5, h6, p{
-    font-family: Roboto;
-} */
-
 .title-container{
     display: flex;
     flex-direction: column;
@@ -17,7 +13,7 @@ body{
 .title{
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
 }
 
@@ -41,19 +37,23 @@ body{
 }
 
 .play-button{
-    padding: 15px 50px 15px 50px;
+    padding: 20px 50px 20px 50px;
     color: #1A4461;
-    font-size: 20px;
+    font-size: 30px;
     width: 180px;
     font-weight: bold;
     border: 1px solid #1A4461;
     border-radius: 20px;
     cursor: pointer;
     margin-top: 50px;
-    transition: background-color .8s, color .8s, border .8s;
+    transition: opacity .4s;
 }
 
 .play-button:hover{
+    opacity: .70;
+}
+
+.play-button:active{
     background-color: #1A4461;
     color: white;
     border: 1px solid white;
