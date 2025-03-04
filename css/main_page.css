@@ -1,7 +1,7 @@
 body{
     font-family: Roboto;
     color: white;
-    padding-top: 100px;
+    padding-top: 85px;
 }
 
 p{
@@ -15,5 +15,19 @@ p{
     text-align: center;
     margin-top: 5px;
     margin-bottom: 0;
+    font-weight: normal;
 }
 
+.main-container{
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 10px 25px 0px 25px;
+}
+
+.destination-container{
+    background-color: #D9D9D9;
+    height: 300px;
+    width: 270px;
+}

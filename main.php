@@ -5,6 +5,7 @@
     <title>Finding Falcone</title>
     <link rel="stylesheet" href="css/main_page.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -28,6 +29,17 @@
         </div>
     </header>
     <h1 class="select">Select planets you want to search in:</h1>
+
+    <div class="main-container">
+        <div class="destination-container">Destination 1</div>
+        <div class="destination-container">Destination 2</div>
+        <div class="destination-container">Destination 3</div>
+        <div class="destination-container">Destination 4</div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-note">by: Mark Francis Gorreon</p>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,19 @@
+.footer{
+    background-color: #C6CBCE;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+.footer-note{
+    color: black;
+    font-size: 15px;
+    margin: 0;
+}
