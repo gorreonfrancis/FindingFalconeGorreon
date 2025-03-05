@@ -2,6 +2,7 @@ body{
     font-family: Roboto;
     color: white;
     padding-top: 85px;
+    padding-bottom: 50px;
 }
 
 p{
@@ -31,7 +32,7 @@ p{
 
 .destination-container{
     background-color: #D9D9D9;
-    height: 300px;
+    height: 250px;
     /* width: 295px; */
     border-radius: 25px;
 }
@@ -40,5 +41,104 @@ p{
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 18px;
+}
+
+.dropdown-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dropdown{
+    padding: 7px 16px 7px 16px;
+    border: 3px solid #1A4461;
+    border-radius: 7px;
+    font-size: 16px;
+    width: 70%;
+}
+
+.radio-container{
+    padding: 10px 16px 10px 16px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.radio-option{
+    font-size: 17px;
+    display: inline-block; 
+    margin-bottom: 6px; 
+}
+
+@media (max-width: 600px) { 
+    .main-container{
+        grid-template-columns: 1fr 1fr; 
+        column-gap: 2px;
+        row-gap: 5px;
+    }
+
+    .dropdown{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .main-container{
+        grid-template-columns: 1fr 1fr; 
+        column-gap: 2px;
+        row-gap: 5px;
+    }
+    .dropdown{
+        font-size: 13px;
+    }
+}
+
+.time-container, .find-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.time{
+    color: black;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.find-button{
+    padding: 16px 30px 16px 30px;
+    background-color: #1A4461;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #1A4461;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .7s;
+}
+
+.find-button:hover{
+    opacity: .8;
+}
+
+.find-button:active {
+    background-color: white;
+    border: 1px solid #1A4461;
+    color: #1A4461;
+    opacity: .8;
+}
+
+.find-button:active .find-pic path {
+    fill: #1A4461 !important;
+}
+
+.find-pic{
+    height: 30px;
+    width: 30px;
+    margin-right: 6px;
 }
