@@ -1,0 +1,146 @@
+body{
+    font-family: Roboto;
+    color: white;
+    padding-top: 85px;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0px;
+    row-gap: 0px;
+
+}
+
+.falcon-pic{
+    padding-left: 50px;
+}
+
+
+.message-result, .message-note, .time, .planet{
+    color: #1A4461;
+}
+
+.message-result{
+    font-size: 55px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+}
+
+.message-note{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+}
+
+.time, .planet{
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.again-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.again-button{
+    padding: 16px 30px 16px 30px;
+    background-color: #1A4461;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #1A4461;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.again-pic{
+    height: 30px;
+    width: 30px;
+    margin-right: 6px;
+}
+
+
+.again-button:hover{
+    opacity: .8;
+}
+
+.again-button:active {
+    background-color: white;
+    border: 1px solid #1A4461;
+    color: #1A4461;
+    opacity: .8;
+}
+
+.again-button:active .again-pic path {
+    fill: #1A4461 !important;
+}
+
+
+@media (max-width: 600px) {
+    .main-container {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .falcon-pic {
+        width: 200px;
+        padding-left: 0;
+        margin: 0 auto; 
+        display: block;
+    }
+
+    .message-result {
+        margin-top: 4px;
+        font-size: 35px;
+    }
+
+    .message-note {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .time, .planet {
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-container {
+        padding-bottom: 10px;
+    }
+
+    .falcon-pic {
+        width: 400px;
+        padding-left: 0;
+    }
+
+    .message-result {
+        font-size: 35px;
+    }
+
+    .message-note {
+        font-size: 25px;
+    }
+
+    .time, .planet {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 650px) {
+    .again-button{
+        font-size: 2.5vw;
+    }
+}
