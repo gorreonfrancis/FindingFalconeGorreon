@@ -32,11 +32,10 @@
             <img src="pics/falcon.png" alt="King Shan" class="falcon-pic">
         </div>
         <div class="result-container">
-            <!-- <p class="message-result">Mission Successful!</p>
-            <p class="message-note">King Shan is mighty pleased</p>
-            <p class="time">Time Taken: N hours</p>
-            <p class="planet">Planet Found: Planet Name</p> -->
-            <p id="result-message" class="time"></p>
+            <p class="message-result" id="message-result">Mission Successful!</p>
+            <p class="message-note" id="message-note">King Shan is mighty pleased</p>
+            <p class="time" id="time">Time Taken: N hours</p>
+            <p class="planet" id="planet">Planet Found: Planet Name</p>
 
             <div class="again-container">
                 <button class="again-button">
@@ -59,12 +58,20 @@
             const planet = params.get("planet");
             const time = params.get("time");
 
-            const resultMessage = document.getElementById("result-message");
+            const planetMessage = document.getElementById("planet");
+            const timeMessage = document.getElementById("time");
+            const resultMessage = document.getElementById("message-result");
+            const noteMessage = document.getElementById("message-note");
+
 
             if (status === "success") {
-                resultMessage.innerHTML = `<span class="found">🎉 Found Falcone on <b>${planet}</b>! <br> Time Taken: <b>${time} hours</b></span>`;
+                planetMessage.innerHTML = `Planet Found: ${planet}`;
+                timeMessage.innerHTML = `Time Taken: ${time}`;
             } else {
-                resultMessage.innerHTML = `<span class="not-found">❌ Falcone not found. Try again!</span>`;
+                resultMessage.innerHTML = `Mission Unsuccessful!`;
+                noteMessage.innerHTML = `King Shan is mighty displeased`;
+                document.getElementById("time").style.visibility = "hidden";
+                document.getElementById("planet").style.visibility = "hidden";
             }
         });
     </script>

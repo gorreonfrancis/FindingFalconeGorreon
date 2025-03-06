@@ -87,6 +87,14 @@ p{
     .dropdown{
         font-size: 13px;
     }
+
+    .radio-label{
+        font-size: 10px;
+    }
+    
+    .vehicle-pic{
+        width: 18px;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {

@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function updateTotalTime() {
         let totalTime = Object.values(selectedTimes).reduce((sum, time) => sum + time, 0);
-        timeDisplay.textContent = `Total Time: ${totalTime.toFixed(2)} hours`;
+        timeDisplay.textContent = `Total Time: ${totalTime.toFixed(2)}`;
     }
 
     async function findFalcone() {
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
         } catch (error) {
             console.error("Error finding Falcone:", error);
-            alert("⚠️ Error in the request. Please try again.");
+            alert("Error in the request. Please try again.");
         }
     }
     

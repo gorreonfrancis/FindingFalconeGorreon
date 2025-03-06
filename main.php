@@ -18,10 +18,10 @@
         <h3 class="header-title">Finding Falcone</h3>
 
         <div class="right-section">
-            <div class="reset-container">
+            <a href="main.php" class="reset-container">
                 <img src="pics/reset_logo.svg" alt="Reset Logo" class="reset-logo">
                 <p class="reset">Reset</p>
-            </div>
+            </a>
 
             <a href="homepage.php" class="home-container">
                 <img src="pics/home_logo.svg" alt="Home Logo" class="home-logo">
@@ -84,7 +84,7 @@
     </div>
 
     <div class="time-container">
-        <p class="time" id="total-time">Time Taken: N hours</p>
+        <p class="time" id="total-time">Total Time: 0.00</p>
     </div>
 
     <div class="find-container">

@@ -34,6 +34,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    transition: opacity .8s;
+}
+
+.reset-container:hover{
+    opacity: .70;
+}
+
+.reset-container:active{
+    opacity: .5;
 }
 
 .home-container{
