@@ -4,6 +4,10 @@ body{
     padding-top: 85px;
 }
 
+a{
+    text-decoration: none;
+}
+
 .main-container{
     display: grid;
     grid-template-columns: 1fr 2fr;
