@@ -3,6 +3,7 @@
 
 <head>
     <title>Finding Falcone</title>
+    <link rel="icon" type="image/png" href="pics/logo.svg">
     <link rel="stylesheet" href="css/result.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
