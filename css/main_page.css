@@ -65,10 +65,16 @@ p{
     margin-left: 5px;
 }
 
-.radio-option{
-    font-size: 17px;
-    display: inline-block; 
-    margin-bottom: 6px; 
+.radio-label{
+    font-size: 15px;
+}
+.radio-option {
+    display: flex;
+    align-items: center;
+}
+
+.vehicle-pic{
+    width: 30px;
 }
 
 @media (max-width: 600px) { 

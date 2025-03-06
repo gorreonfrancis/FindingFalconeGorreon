@@ -41,14 +41,6 @@
             </div>
             <div class="radio-container">
                 <div class="vehicle-options"></div>
-                <!-- <input type="radio" value="Space Pod" class="radio-button">
-                <label for="html" class="radio-option">Space Pod (N)</label><br>
-                <input type="radio" value="Space Rocket" class="radio-button">
-                <label for="css" class="radio-option">Space Rocket (N)</label><br>
-                <input type="radio" value="Space Shuttle" class="radio-button">
-                <label for="javascript" class="radio-option">Space Shuttle (N)</label><br>
-                <input type="radio" value="Space Ship" class="radio-button">
-                <label for="ship" class="radio-option">Space Ship (N)</label> -->
             </div>
         </div>
 
@@ -61,14 +53,8 @@
             </div>
             <div class="radio-container">
                 <div class="vehicle-options"></div>
-                <!-- <input type="radio" value="Space Pod" class="radio-button">
-                <label for="html" class="radio-option">Space Pod (N)</label><br>
-                <input type="radio" value="Space Rocket" class="radio-button">
-                <label for="css" class="radio-option">Space Rocket (N)</label><br>
-                <input type="radio" value="Space Shuttle" class="radio-button">
-                <label for="javascript" class="radio-option">Space Shuttle (N)</label><br>
-                <input type="radio" value="Space Ship" class="radio-button">
-                <label for="ship" class="radio-option">Space Ship (N)</label> -->
+                <!-- <input type="radio" value="Space Ship" class="radio-button">
+                <label for="ship" class="radio-option">Space Ship (N)</label>  -->
             </div>
         </div>
 
@@ -81,14 +67,6 @@
             </div>
             <div class="radio-container">
                 <div class="vehicle-options"></div>
-                <!-- <input type="radio" value="Space Pod" class="radio-button">
-                <label for="html" class="radio-option">Space Pod (N)</label><br>
-                <input type="radio" value="Space Rocket" class="radio-button">
-                <label for="css" class="radio-option">Space Rocket (N)</label><br>
-                <input type="radio" value="Space Shuttle" class="radio-button">
-                <label for="javascript" class="radio-option">Space Shuttle (N)</label><br>
-                <input type="radio" value="Space Ship" class="radio-button">
-                <label for="ship" class="radio-option">Space Ship (N)</label> -->
             </div>
         </div>
 
@@ -101,14 +79,6 @@
             </div>
             <div class="radio-container">
                 <div class="vehicle-options"></div>
-                <!-- <input type="radio" value="Space Pod" class="radio-button">
-                <label for="html" class="radio-option">Space Pod (N)</label><br>
-                <input type="radio" value="Space Rocket" class="radio-button">
-                <label for="css" class="radio-option">Space Rocket (N)</label><br>
-                <input type="radio" value="Space Shuttle" class="radio-button">
-                <label for="javascript" class="radio-option">Space Shuttle (N)</label><br>
-                <input type="radio" value="Space Ship" class="radio-button">
-                <label for="ship" class="radio-option">Space Ship (N)</label> -->
             </div>
         </div>
     </div>
