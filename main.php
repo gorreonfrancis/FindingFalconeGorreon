@@ -24,7 +24,7 @@
                 <p class="reset">Reset</p>
             </a>
 
-            <a href="homepage.php" class="home-container">
+            <a href="index.php" class="home-container">
                 <img src="pics/home_logo.svg" alt="Home Logo" class="home-logo">
                 <p class="reset">Home</p>
             </a>
