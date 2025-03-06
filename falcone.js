@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     let planets = [];
     let vehicles = [];
-    let selectedVehicles = {}; // Tracks selected vehicles per planet
-    let selectedTimes = {}; // Stores time taken for each pair
+    let selectedVehicles = {}; 
+    let selectedTimes = {}; 
 
     try {
         const [planetData, vehicleData] = await Promise.all([
@@ -21,9 +21,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         ]);
 
         planets = planetData;
-        vehicles = vehicleData.map(v => ({ ...v, used: 0 })); // Track used vehicles
+        vehicles = vehicleData.map(v => ({ ...v, used: 0 })); 
 
-        // Populate dropdowns with planets
         dropdowns.forEach(dropdown => {
             dropdown.innerHTML = '<option value="">Choose a planet</option>';
             planets.forEach(planet => {
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
 
             updateVehicleOptions();
-            checkButtonState(); // Check button state after selecting a planet
+            checkButtonState(); 
         });
     });
 
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         dropdowns.forEach((dropdown, index) => {
             const selectedPlanet = dropdown.value;
             const vehicleContainer = vehicleContainers[index];
-            vehicleContainer.innerHTML = ""; // Clear previous options
+            vehicleContainer.innerHTML = ""; 
 
             if (!selectedPlanet) return;
 
@@ -100,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     selectedVehicles[selectedPlanet] = vehicle.name;
                     selectedTimes[selectedPlanet] = planetData.distance / vehicle.speed;
                     updateVehicleCount();
-                    checkButtonState(); // Check button state after selecting a vehicle
+                    checkButtonState(); 
                 });
 
                 if (isAvailable || radio.checked) {
@@ -148,7 +147,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
     
-        // Disable button and show loading text
+       
         findButton.disabled = true;
         findButton.innerHTML = `<img src="pics/searching.gif" alt="Searching..." class="searching-gif";">`;
         
@@ -189,7 +188,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 console.error("Error finding Falcone:", error);
                 alert("Error in the request. Please try again.");
             } finally {
-                findButton.disabled = false; // Re-enable button if needed
+                findButton.disabled = false; 
                 findButton.textContent = "Find Falcone";
             }
         }, 3000); // 3-second delay
@@ -197,5 +196,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     findButton.addEventListener("click", findFalcone);
 
-    checkButtonState(); // Initial check to disable the button at the start
+    checkButtonState(); 
 });
