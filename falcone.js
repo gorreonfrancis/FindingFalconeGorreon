@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dropdowns = document.querySelectorAll(".dropdown");
     const vehicleContainers = document.querySelectorAll(".vehicle-options");
     const timeDisplay = document.getElementById("total-time");
-    const resultDisplay = document.getElementById("result");
     const findButton = document.getElementById("find-button");
 
     let planets = [];
@@ -50,6 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
 
             updateVehicleOptions();
+            checkButtonState(); // Check button state after selecting a planet
         });
     });
 
@@ -81,11 +81,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 label.innerHTML = `<b>${vehicle.name}</b> | Speed: ${vehicle.speed} | ${remainingVehicles} left`;
                 label.classList.add("radio-label"); 
 
-                 // Create an image element
                 let img = document.createElement("img");
-                img.src = `pics/${vehicle.name.toLowerCase()}.png`; // Adjust the path based on your image folder
+                img.src = `pics/${vehicle.name.toLowerCase()}.png`;
                 img.alt = vehicle.name;
-                img.classList.add("vehicle-pic")
+                img.classList.add("vehicle-pic");
 
                 let optionWrapper = document.createElement("div");
                 optionWrapper.classList.add("radio-option");
@@ -101,6 +100,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     selectedVehicles[selectedPlanet] = vehicle.name;
                     selectedTimes[selectedPlanet] = planetData.distance / vehicle.speed;
                     updateVehicleCount();
+                    checkButtonState(); // Check button state after selecting a vehicle
                 });
 
                 if (isAvailable || radio.checked) {
@@ -128,55 +128,74 @@ document.addEventListener("DOMContentLoaded", async () => {
         timeDisplay.textContent = `Total Time: ${totalTime.toFixed(2)}`;
     }
 
+    function checkButtonState() {
+        const selectedPlanets = [...dropdowns].map(d => d.value).filter(v => v);
+        const selectedVehicleNames = Object.values(selectedVehicles);
+
+        if (selectedPlanets.length === 4 && selectedVehicleNames.length === 4) {
+            findButton.disabled = false;
+        } else {
+            findButton.disabled = true;
+        }
+    }
+
     async function findFalcone() {
         const selectedPlanets = [...dropdowns].map(d => d.value).filter(v => v);
         const selectedVehicleNames = Object.values(selectedVehicles);
         const totalTime = Object.values(selectedTimes).reduce((sum, time) => sum + time, 0);
     
         if (selectedPlanets.length < 4 || selectedVehicleNames.length < 4) {
-            alert("Please select 4 planets and vehicles.");
             return;
         }
     
-        try {
-            // Step 1: Get the token
-            let tokenResponse = await fetch(tokenURL, {
-                method: "POST",
-                headers: { "Accept": "application/json" }
-            });
-            let tokenData = await tokenResponse.json();
-            let token = tokenData.token;
+        // Disable button and show loading text
+        findButton.disabled = true;
+        findButton.innerHTML = `<img src="pics/searching.gif" alt="Searching..." class="searching-gif";">`;
+        
+        // Simulate a 3-second delay
+        setTimeout(async () => {
+            try {
+                let tokenResponse = await fetch(tokenURL, {
+                    method: "POST",
+                    headers: { "Accept": "application/json" }
+                });
+                let tokenData = await tokenResponse.json();
+                let token = tokenData.token;
     
-            // Step 2: Find Falcone
-            let findResponse = await fetch(findURL, {
-                method: "POST",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    token,
-                    planet_names: selectedPlanets,
-                    vehicle_names: selectedVehicleNames
-                })
-            });
+                let findResponse = await fetch(findURL, {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        token,
+                        planet_names: selectedPlanets,
+                        vehicle_names: selectedVehicleNames
+                    })
+                });
     
-            let findData = await findResponse.json();
+                let findData = await findResponse.json();
     
-            // Step 3: Redirect to result.html with parameters
-            let params = new URLSearchParams({
-                status: findData.status,
-                planet: findData.planet_name || "",
-                time: totalTime.toFixed(2)
-            });
+                let params = new URLSearchParams({
+                    status: findData.status,
+                    planet: findData.planet_name || "",
+                    time: totalTime.toFixed(2)
+                });
     
-            window.location.href = `result.php?${params.toString()}`;
+                window.location.href = `result.php?${params.toString()}`;
     
-        } catch (error) {
-            console.error("Error finding Falcone:", error);
-            alert("Error in the request. Please try again.");
-        }
+            } catch (error) {
+                console.error("Error finding Falcone:", error);
+                alert("Error in the request. Please try again.");
+            } finally {
+                findButton.disabled = false; // Re-enable button if needed
+                findButton.textContent = "Find Falcone";
+            }
+        }, 3000); // 3-second delay
     }
     
     findButton.addEventListener("click", findFalcone);
+
+    checkButtonState(); // Initial check to disable the button at the start
 });

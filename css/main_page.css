@@ -147,6 +147,12 @@ p{
     opacity: .8;
 }
 
+.find-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none; /* Ensures the button is truly unclickable */
+}
+
 .find-button:active .find-pic path {
     fill: #1A4461 !important;
 }
