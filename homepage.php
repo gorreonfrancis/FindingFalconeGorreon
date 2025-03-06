@@ -15,7 +15,11 @@
         <h1 class="title">Finding Falcone</h1>
     </div>
 
-    <p class="story">King Shan has received intelligence that Al Falcone is in hiding in one of these 6 planets - DonLon, Enchai, Jebing, Sapir, Lerbin & Pingasor. However he has limited resources at his disposal & can send his army to only 4 of these planets.</p>
+    <p class="story">After the recent war with neighbouring
+        planet Falicornia, King Shan has exiled the Queen of Falicornia
+        for 15 years. Queen Al Falcone is now in hiding.
+        King Shan has received intelligence that Al Falcone is in hiding in one of these 6 planets - DonLon, Enchai, Jebing, Sapir, Lerbin & Pingasor.
+        However he has limited resources at his disposal & can send his army to only 4 of these planets.</p>
 
     <div class="button-container">
         <a href="main.php"> <button class="play-button">Play</button>

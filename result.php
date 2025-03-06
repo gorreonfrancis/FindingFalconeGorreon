@@ -32,10 +32,11 @@
             <img src="pics/falcon.png" alt="King Shan" class="falcon-pic">
         </div>
         <div class="result-container">
-            <p class="message-result">Mission Successful!</p>
+            <!-- <p class="message-result">Mission Successful!</p>
             <p class="message-note">King Shan is mighty pleased</p>
             <p class="time">Time Taken: N hours</p>
-            <p class="planet">Planet Found: Planet Name</p>
+            <p class="planet">Planet Found: Planet Name</p> -->
+            <p id="result-message" class="time"></p>
 
             <div class="again-container">
                 <button class="again-button">
@@ -50,6 +51,23 @@
     <footer class="footer">
         <p class="footer-note">by: Mark Francis Gorreon</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const status = params.get("status");
+            const planet = params.get("planet");
+            const time = params.get("time");
+
+            const resultMessage = document.getElementById("result-message");
+
+            if (status === "success") {
+                resultMessage.innerHTML = `<span class="found">🎉 Found Falcone on <b>${planet}</b>! <br> Time Taken: <b>${time} hours</b></span>`;
+            } else {
+                resultMessage.innerHTML = `<span class="not-found">❌ Falcone not found. Try again!</span>`;
+            }
+        });
+    </script>
 </body>
 
 </html>
