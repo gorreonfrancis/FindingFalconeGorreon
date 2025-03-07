@@ -29,7 +29,7 @@ body{
     margin-right: 90px;
     font-size: 20px;
 }
-
+/* 
 .button-container{
     display: flex;
     align-items: center;
@@ -37,6 +37,7 @@ body{
 }
 
 .play-button{
+    background-color: white;
     padding: 20px 50px 20px 50px;
     color: #1A4461;
     font-size: 30px;
@@ -54,6 +55,38 @@ body{
 }
 
 .play-button:active{
+    background-color: #1A4461;
+    color: white;
+    border: 1px solid white;
+} */
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button {
+    display: inline-block; /* Makes the anchor behave like a button */
+    background-color: white;
+    padding: 20px 70px;
+    color: #1A4461;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #1A4461;
+    border-radius: 20px;
+    text-decoration: none; /* Removes default underline */
+    text-align: center;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: opacity .4s;
+}
+
+.play-button:hover {
+    opacity: .70;
+}
+
+.play-button:active {
     background-color: #1A4461;
     color: white;
     border: 1px solid white;
