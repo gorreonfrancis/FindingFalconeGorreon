@@ -1,8 +1,14 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
 body{
     font-family: Roboto;
     color: white;
-    padding-top: 85px;
-    padding-bottom: 50px;
+    padding-top: 110px;
+    padding-bottom: 60px;
 }
 
 p{
@@ -77,37 +83,6 @@ p{
     width: 30px;
 }
 
-@media (max-width: 600px) { 
-    .main-container{
-        grid-template-columns: 1fr 1fr; 
-        column-gap: 2px;
-        row-gap: 5px;
-    }
-
-    .dropdown{
-        font-size: 13px;
-    }
-
-    .radio-label{
-        font-size: 10px;
-    }
-    
-    .vehicle-pic{
-        width: 18px;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1024px) {
-    .main-container{
-        grid-template-columns: 1fr 1fr; 
-        column-gap: 2px;
-        row-gap: 5px;
-    }
-    .dropdown{
-        font-size: 13px;
-    }
-}
-
 .time-container, .find-container{
     display: flex;
     justify-content: center;
@@ -161,4 +136,41 @@ p{
     height: 30px;
     width: 30px;
     margin-right: 6px;
+}
+
+@media (max-width: 600px) { 
+    .main-container{
+        grid-template-columns: 1fr; 
+        column-gap: 2px;
+        row-gap: 5px;
+    }
+
+    .select{
+        font-size: 15px;
+    }
+
+    .find-button{
+        font-size: 25px;
+        padding: 10px 35px;
+    }
+
+    .find-pic, .searching-gif{
+        height: 20px;
+        width: 20px;
+    }
+
+    .time{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .main-container{
+        grid-template-columns: 1fr 1fr; 
+        column-gap: 2px;
+        row-gap: 5px;
+    }
+    .dropdown{
+        font-size: 13px;
+    }
 }

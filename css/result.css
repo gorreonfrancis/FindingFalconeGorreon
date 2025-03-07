@@ -53,6 +53,7 @@ a{
 }
 
 .again-button{
+    display: inline-block; /* Makes the anchor behave like a button */
     padding: 16px 30px 16px 30px;
     background-color: #1A4461;
     color: white;
@@ -116,6 +117,16 @@ a{
 
     .time, .planet {
         font-size: 15px;
+    }
+
+    .again-button{
+        font-size: 25px;
+        padding: 10px 35px;
+    }
+
+    .again-pic{
+        height: 20px;
+        width: 20px;
     }
 
 }

@@ -83,4 +83,20 @@
     .header-title{
         display: none;
     }
+
+    .right-section{
+        padding-right: 10px;
+    }
+
+    .reset, .home{
+        font-size: 12px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .reset-logo, .home-logo{
+        height: 12px;
+        width: 12px;
+        margin-right: 2px;
+    }
 }
