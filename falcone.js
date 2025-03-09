@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let selectedVehicles = {}; 
     let selectedTimes = {}; 
 
+    //fetch the planets and vehicle data using the API
     try {
         const [planetData, vehicleData] = await Promise.all([
             fetch(planetURL).then(res => res.json()),
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("Error fetching data:", error);
     }
 
+    //Dynamically change the planets based on selection
     dropdowns.forEach(dropdown => {
         dropdown.addEventListener("change", () => {
             let selectedValues = new Set([...dropdowns].map(d => d.value).filter(v => v));
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
+    //Dynamically change the vehicles based on availability and max capacity
     function updateVehicleOptions() {
         dropdowns.forEach((dropdown, index) => {
             const selectedPlanet = dropdown.value;
